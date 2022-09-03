@@ -62,10 +62,10 @@ class Foo:
     def __init__(self, x):
         self.x = x
 
-    def __setattr__(self, key, value):
+    # def __setattr__(self, key, value):
 
 
 a = Foo(42)
 
-a.y =
+# a.y =
 print(a.x)

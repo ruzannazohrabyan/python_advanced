@@ -15,7 +15,7 @@ class Person:
 class Student(Person):
 
     def __init__(self, name, date_of_birth, student_class, subjects=None):
-        super(Student, self).__init__(name)
+        super().__init__(name)
         self.date_of_birth = date.fromisoformat(date_of_birth)
         self.student_class = student_class
         self.subjects = {}
@@ -29,6 +29,7 @@ class Student(Person):
             for item in subjects:
                 if item.name not in self.subjects.keys():
                     self.subjects[item.name] = None
+
     @property
     def age(self):
         return date.today().year - self.date_of_birth.year
@@ -36,7 +37,7 @@ class Student(Person):
 
 class Teacher(Person):
     def __init__(self, name, subject):
-        super(Teacher, self).__init__(name)
+        super().__init__(name)
         self.subject = subject
 
     def grading(self, student, point):
